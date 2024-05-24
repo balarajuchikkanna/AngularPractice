@@ -1,0 +1,15 @@
+<!-- how to pass the data from parent to child -->
+<h1>Child component</h1>
+<p>home works!</p>
+<h1>{{name}}</h1>
+
+<!-- 09-05-2024 -->
+<button (click)="triggerEvent()">Send Data</button> <br>
+
+<button (click)="getprod()">Get Prod</button>
+
+<div *ngFor="let data of products">
+    {{data.productid}} - {{data.name}} - {{data.price}}
+</div>
+
+<!-- 16-05-2024 pipes -->

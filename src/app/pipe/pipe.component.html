@@ -1,0 +1,27 @@
+<p>pipe works!</p>
+
+<p>pipe works!</p>
+<h3> Date : {{today | date }}</h3>
+
+<h3> Date GMT : {{today | date: 'h:mm a z' }}</h3>
+<h3> Date Medium : {{today | date: 'medium' }}</h3>
+<h3> Date short : {{today | date: 'shortTime' }}</h3>
+<h3> Date mm/ss : {{today | date: 'mm : ss' }}</h3>
+<h3> Date  : {{today | date: "MMM dd, yyyy  'at' hh:mm a " }}</h3>
+
+
+<h3>UpperCase : {{name | uppercase}} </h3>
+<h3>Lower Case : {{name | lowercase}} </h3>
+<h3>Percentage : {{amount | percent}} </h3>
+
+<h3>Currency : {{amount | currency}} </h3>
+<h3>Currency USD : {{amount | currency : 'USD'}} </h3>
+<h3>Currency INR : {{amount | currency : 'INR'}} </h3>
+
+<h3>Full Date {{ birthday | date:'fullDate' | uppercase}}</h3>
+
+<h3>Decimal:  {{3.6 | number: '1.0-0'}}</h3>
+
+<p>Percentage - A : {{a| percent}} </p>
+
+<p>Percentage with Decimal - B : {{ b | percent : '4.3-5'}}</p>

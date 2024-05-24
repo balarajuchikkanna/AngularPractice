@@ -1,0 +1,27 @@
+<p>form works!</p>
+
+<form #loginform="ngForm" (ngSubmit)="submitForm(loginform)">
+    <label>FirstName</label>
+    <input type="text" name="fname" id="fname" required #fname="ngModel" ngModel> <br>
+    <span *ngIf="fname.valid && fname.touched">
+        Please Enter your first name
+    </span><br>
+
+    <label>LastName</label>
+    <input type="text" name="lname" id="lname" #lname="ngModel" ngModel> <br>
+    <label>Email</label>
+    <input type="email" name="email" id="email" required #email="ngModel" ngModel><br>
+     <span *ngIf="email.invalid && email.touched">
+        Please Enter your email
+    </span><br>
+
+    <label>Password</label>
+    <input type="password" name="password" id="password" #password="ngModel" ngModel> <br>
+    <button>Submit</button>
+
+    <div>
+        <div>Touched - {{fname.touched}} | Untouched - {{fname.untouched}} </div>
+        <div>Valid - {{fname.valid}} | Invalid - {{fname.invalid}} </div>
+        <div>Dirty - {{fname.dirty}} | Pristine - {{fname.pristine}} </div>
+    </div>
+</form>
